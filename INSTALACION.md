@@ -25,7 +25,7 @@ Solo lo necesitas si vas a pedirle a Claude que descargue videos por ti. Si ya t
 2. Instala Deno, que yt-dlp usa para entender YouTube:
    - **Windows:** `winget install DenoLand.Deno`
    - **Mac:** `brew install deno`
-3. **Cierra y vuelve a abrir la terminal.** Comprueba con `yt-dlp --version` y `deno --version`.
+3. **Cierra y vuelve a abrir la terminal.** Comprueba con `yt-dlp --version` y `deno --version`. Si al escribir `yt-dlp --version` Windows dice que no reconoce el comando, pero `python -m yt_dlp --version` sí funciona, falta agregar una carpeta al PATH. Dile a Claude: «yt-dlp no se reconoce como comando, ayúdame a arreglarlo». Él te guía con un comando que se pega en PowerShell.
 
 YouTube cambia seguido. Si una descarga deja de funcionar, vuelve a ejecutar el comando del paso 1 para actualizar yt-dlp.
 
