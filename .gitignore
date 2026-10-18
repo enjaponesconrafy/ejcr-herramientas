@@ -1,0 +1,11 @@
+# Tus videos y lo que generan se quedan en tu computadora, no se suben
+videos/*
+!videos/.gitkeep
+*.soniox.json
+*.apkg
+*.mp3
+*.mp4
+*.mkv
+*.webm
+__pycache__/
+.env
