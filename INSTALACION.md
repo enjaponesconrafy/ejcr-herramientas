@@ -18,7 +18,18 @@ Después **cierra y vuelve a abrir la terminal**. Comprueba con `ffmpeg -version
 ## 4. Piezas de Python
 `python -m pip install requests janome genanki` (Mac: `python3 -m pip install ...`).
 
-## 5. Cuenta de Soniox (transcripción)
+## 5. Descargar videos de YouTube (opcional)
+Solo lo necesitas si vas a pedirle a Claude que descargue videos por ti. Si ya tienes los archivos de video, sáltate esta parte.
+
+1. Instala yt-dlp, la herramienta que descarga: `python -m pip install -U "yt-dlp[default]"` (Mac: `python3 -m pip install -U "yt-dlp[default]"`).
+2. Instala Deno, que yt-dlp usa para entender YouTube:
+   - **Windows:** `winget install DenoLand.Deno`
+   - **Mac:** `brew install deno`
+3. **Cierra y vuelve a abrir la terminal.** Comprueba con `yt-dlp --version` y `deno --version`.
+
+YouTube cambia seguido. Si una descarga deja de funcionar, vuelve a ejecutar el comando del paso 1 para actualizar yt-dlp.
+
+## 6. Cuenta de Soniox (transcripción)
 1. Crea una cuenta en https://console.soniox.com y agrega algo de saldo (con 10 USD transcribes unas 100 horas de audio; cuesta aprox. 0.10 USD por hora).
 2. Crea una clave de API (API keys).
 3. Guárdala **tú mismo** como variable de entorno. **No la pegues en ningún chat.**
