@@ -11,6 +11,8 @@ Habla siempre en español latinoamericano neutro, con tuteo. El estudiante puede
 | «Haz un mazo de Anki del video X» | `subtitulos.md` (si aún no hay .srt) y luego `anki.md` |
 | «Haz el audio condensado del video X» | `audio-condensado.md` (necesita el .srt del paso 1) |
 | «Hazme todo para el video X» | `subtitulos.md` → `anki.md` → `audio-condensado.md`, en ese orden |
+| «Procesa este enlace de YouTube» / «Descarga el video…» (video, lista o canal) | `procesar-contenido.md` |
+| «Hazme todo para este enlace» | `procesar-contenido.md` (él llama a las demás guías en orden) |
 
 Los videos viven todos en la carpeta `videos/`. No crees una carpeta nueva por video. Los archivos que se generan quedan junto al video, con su mismo nombre. Si las carpetas videos/ o estudiantes/ no existen, créalas tú.
 
@@ -22,6 +24,7 @@ Los videos viven todos en la carpeta `videos/`. No crees una carpeta nueva por v
 5. **Trabaja sobre copias.** Nunca modifiques ni borres el video original.
 6. **Uso personal.** Los mazos y audios hechos con material comercial o con derechos de autor son para estudio personal. No los compartas ni los publiques.
 7. **No inventes.** Si no entiendes una frase o no estás seguro de una traducción, dilo y pregunta.
+8. **Las descargas respetan los límites.** Solo descargas videos accesibles públicamente. Si un video es privado, de pago, solo para miembros o está restringido, no intentes saltarte la restricción: pide un archivo local. Nunca leas ni pegues cookies en el chat.
 
 ## Antes de empezar (una vez por sesión)
 Comprueba que el entorno está listo y, si algo falta, ofrécete a instalarlo:
@@ -29,6 +32,7 @@ Comprueba que el entorno está listo y, si algo falta, ofrécete a instalarlo:
 - `ffmpeg -version`.
 - Las piezas de Python: `python -m pip install requests janome genanki`.
 - Que exista la variable `SONIOX_API_KEY` (comprueba solo si está definida; nunca muestres su valor).
+- Si el estudiante da un enlace de YouTube: `yt-dlp --version` y `deno --version` (ver `procesar-contenido.md`).
 
 Tras instalar ffmpeg o cambiar variables de entorno, el estudiante debe **cerrar y volver a abrir la terminal**. Si algo falla por eso, díselo claramente.
 Si todo es nuevo para el estudiante, sigue `INSTALACION.md` con él paso a paso.
